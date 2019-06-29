@@ -1,5 +1,11 @@
 <?php
 
+require_once(__DIR__. '/config.php');
+equire_once(__DIR__. '/Bingo.php');
+
+$bingo = new \MyApp\Bingo();
+$nums = $bingo->create();
+
 /*
 $nums[][]
 B: $nums[0] 1-15
@@ -17,11 +23,6 @@ for ($i = 0; $i < 5; $i++){
 $nums [2][2] = "FREE";
 // var_dump($nums);
 // exit;
-
-function h($s){
-  return htmlspecialchars($s,ENT_QUOTES, 'UTF-8');
-}
-
 
 ?>
 <!DOCTYPE html>
